@@ -1,0 +1,8 @@
+.list-container {
+    display: flex;
+    width: calc(100% - 40px);
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}

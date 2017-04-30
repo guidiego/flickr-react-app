@@ -14,11 +14,11 @@ const apiMiddleware = store => next => action => {
 
   return client
     .then(
-      responseCreator(next, { type: type[1], ...otherArgs }),
+      responseCreator(next, { type: type[1], ...otherArgs })
     )
     .catch(
-      responseCreator(next, { type: type[2], ...otherArgs }),
-    );
+      responseCreator(next, { type: type[2], ...otherArgs })
+    )
 };
 
 export default apiMiddleware;

@@ -1,0 +1,33 @@
+.search-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.search-block h1 {
+    color: #34495e;
+    font-size: 28px;
+    margin: 0 0 10px;
+}
+
+.search-block h1 b {
+    color: #b659ab;
+}
+
+.search-block.search-minify{
+    height: auto;
+    width: 100%;
+}
+
+.search-block.search-minify h1{
+    display: none;
+}
+
+.search-block.search-minify .input{
+    border-radius: 0px;
+    padding: 11px 30px;
+}

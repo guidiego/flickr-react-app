@@ -1,15 +1,16 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import { Router, Route, browserHistory } from 'react-router'
 
-import HomeView from './containers/View/Home'
-import PictureList from './containers/Picture/List'
+import store from './flux/rootStore'
+import HomeView from './containers/Home'
 
 export const App = () => (
-    <Router history={browserHistory}>
-        <Route path="/" component={HomeView}>
-            <Route path="search" component={PictureList} />
-        </Route>
-    </Router>
+    <Provider store={store}>
+        <Router history={browserHistory}>
+            <Route path="/" component={HomeView} />
+        </Router>
+    </Provider>
 )
 
 export default App
