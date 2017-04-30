@@ -48,13 +48,20 @@ export class HomeWrapper extends Component {
         this.scroll = this.scroll.bind(this)
     }
     
+    componentWillUpdate(nextProps) {
+        console.log()
+        if (this.props.location.query.tags !== nextProps.location.query.tags) {
+            this.props.callNextPage(nextProps.location.query.tags, this.props.page)
+        }
+    }
+    
     componentDidMount() {
         window.addEventListener('scroll', this.scroll)
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.scroll)
-    } 
+    }
     
     scroll() {
         const distToBottom = Math.max(document.body.offsetHeight - (window.pageYOffset + window.innerHeight), 0);
